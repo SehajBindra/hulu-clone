@@ -42,4 +42,4 @@ const Thumnail = forwardRef(({ result }, ref) => {
   );
 });
 
-export default Thumnail;
+export default { Thumnail };
