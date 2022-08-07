@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from "../Components/Header";
-import Nav from "../Components/Nav";
+import Nav from "./Components/Nav";
 import Results from "../Components/Results";
 import requests from "../utils/requests";
 import { Helmet } from "react-helmet";
