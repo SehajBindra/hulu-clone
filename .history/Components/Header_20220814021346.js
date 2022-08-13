@@ -16,9 +16,9 @@ function Header() {
         <HeaderItem title="TRENDING" Icon={LightningBoltIcon} />
         <HeaderItem title="SEARCH" Icon={SearchIcon} />
         <HeaderItem
-          onclick={signIn}
+          onclick={session ? signIn : signOut}
           Icon={UserIcon}
-          title={session ? "Sign Out" : "Sign In"}
+          title={session ? "Sign out" : "Sign In"}
         />
       </div>
 

@@ -18,7 +18,7 @@ function Header() {
         <HeaderItem
           onclick={signIn}
           Icon={UserIcon}
-          title={session ? "Sign Out" : "Sign In"}
+          title={session ? `Hello ,there` : "Sign In"}
         />
       </div>
 

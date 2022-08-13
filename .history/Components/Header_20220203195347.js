@@ -5,23 +5,19 @@ import {
   LightningBoltIcon,
   SearchIcon,
   UserIcon,
-} from "@heroicons/react/outline";
-import { signIn, signOut, useSession } from "next-auth/react";
+} from "@heroicons/react/outline"
 function Header() {
-  const { data: session } = useSession();
   return (
     <header className="flex flex-col sm:flex-row m-5 justify-between items-center h-auto">
       <div className=" flex flex-grow  justify-around max-w-2xl">
-        <HeaderItem title="HOME" Icon={HomeIcon} />
-        <HeaderItem title="TRENDING" Icon={LightningBoltIcon} />
-        <HeaderItem title="SEARCH" Icon={SearchIcon} />
-        <HeaderItem
-          onclick={signIn}
-          Icon={UserIcon}
-          title={session ? "Sign Out" : "Sign In"}
-        />
+        <HeaderItem title='HOME' Icon={HomeIcon} />
+        <HeaderItem title='TRENDING' Icon={LightningBoltIcon} />
+        <HeaderItem title='SEARCH' Icon={SearchIcon} />
+        <HeaderItem title='USER' Icon={UserIcon} />
       </div>
-
+      
+      
+      
       <Image
         className="object-contain"
         src="https://links.papareact.com/ua6"
