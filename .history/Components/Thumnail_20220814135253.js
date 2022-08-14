@@ -9,7 +9,7 @@ export default function Thumnail({ result }) {
   return (
     <div className=" p-2 overflow-hidden group cursor-pointer transition-all duratiion-200 ease-in transform sm:hover:scale-125 hover:z-50 rounded-xl">
       <Image
-        className=" p-1 rounded-lg overflow-x-hidden  sm:max-w-sm   sm:rounded-lg md:max-w-md md:p-2 lg:max-w-2xl lg:p-2"
+        className=" p-1 rounded-lg  sm:max-w-sm   sm:rounded-lg md:max-w-md md:p-2 lg:max-w-2xl lg:p-2"
         layout="responsive"
         src={
           `${BASE_URL}${result.backdrop_path || result.poster_path}` ||

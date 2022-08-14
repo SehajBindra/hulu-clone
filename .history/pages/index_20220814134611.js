@@ -8,7 +8,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 
 const Home = ({ results }) => {
-  // console.log(results);
+  console.log(results);
 
   const router = useRouter();
   const { data: session, status } = useSession({

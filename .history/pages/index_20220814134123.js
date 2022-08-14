@@ -8,7 +8,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 
 const Home = ({ results }) => {
-  // console.log(results);
+  console.log(results);
 
   const router = useRouter();
   const { data: session, status } = useSession({
@@ -17,8 +17,8 @@ const Home = ({ results }) => {
       router.push("/signin");
     },
   });
-
-  return (
+  if (status === "authenticated") {
+    return;
     <div className=" overflow-x-hidden">
       <Head>
         <title>Hulu </title>
@@ -36,8 +36,8 @@ const Home = ({ results }) => {
       <Header />
       <Nav />
       <Results results={results} />
-    </div>
-  );
+    </div>;
+  }
 };
 
 export default Home;

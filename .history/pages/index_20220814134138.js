@@ -8,7 +8,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 
 const Home = ({ results }) => {
-  // console.log(results);
+  console.log(results);
 
   const router = useRouter();
   const { data: session, status } = useSession({
@@ -17,27 +17,28 @@ const Home = ({ results }) => {
       router.push("/signin");
     },
   });
+  if (status === "authenticated") {
+    return (
+      <div className=" overflow-x-hidden">
+        <Head>
+          <title>Hulu </title>
 
-  return (
-    <div className=" overflow-x-hidden">
-      <Head>
-        <title>Hulu </title>
+          <link rel="icon" href="/hulu.svg" />
+        </Head>
 
-        <link rel="icon" href="/hulu.svg" />
-      </Head>
+        <Helmet>
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          />
+        </Helmet>
 
-      <Helmet>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-        />
-      </Helmet>
-
-      <Header />
-      <Nav />
-      <Results results={results} />
-    </div>
-  );
+        <Header />
+        <Nav />
+        <Results results={results} />
+      </div>
+    );
+  }
 };
 
 export default Home;
