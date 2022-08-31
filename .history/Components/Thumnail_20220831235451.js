@@ -7,7 +7,7 @@ export default function Thumnail({ result }) {
   const BASE_URL = "https://image.tmdb.org/t/p/w500/";
 
   return (
-    <div className=" p-2 sm:py-4 sm:px-4 overflow-hidden group cursor-pointer transition-all duratiion-200 ease-in transform sm:hover:scale-125 hover:z-50 rounded-xl">
+    <div className=" p-2 pt-2 overflow-hidden group cursor-pointer transition-all duratiion-200 ease-in transform sm:hover:scale-125 hover:z-50 rounded-xl">
       <Image
         className=" p-2 shadow-md rounded-lg overflow-x-hidden  sm:max-w-sm   sm:rounded-lg md:max-w-md md:p-2 lg:max-w-2xl lg:p-2"
         layout="responsive"
